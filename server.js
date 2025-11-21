@@ -26,9 +26,16 @@ const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "https://yourfrontenddomain.com",
+    "https://www.yourfrontenddomain.com",
+  ],
   credentials: true,
 }));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -101,4 +108,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🌐 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`📡 API URL: http://localhost:${PORT}`);
+
 });
