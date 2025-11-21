@@ -27,8 +27,8 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(cors({
   origin: [
-    "https://africamails.com/workisready",
-    "https://www.africamails.com/workisready",
+    "https://africamails.com",
+    "https://www.africamails.com",
   ],
   credentials: true,
 }));
@@ -107,4 +107,5 @@ app.listen(PORT, () => {
   console.log(`📡 API URL: http://localhost:${PORT}`);
 
 });
+
 
