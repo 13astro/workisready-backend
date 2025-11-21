@@ -27,8 +27,8 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(cors({
   origin: [
-    "https://yourfrontenddomain.com",
-    "https://www.yourfrontenddomain.com",
+    "https://africamails.com/workisready",
+    "https://www.africamails.com/workisready",
   ],
   credentials: true,
 }));
@@ -36,9 +36,6 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -110,3 +107,4 @@ app.listen(PORT, () => {
   console.log(`📡 API URL: http://localhost:${PORT}`);
 
 });
+
